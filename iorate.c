@@ -66,7 +66,7 @@ int main(void)
 
       remove(filename);
 
-      printf("+ rm time    = %f seconds\n", tstop - tstart);
+      printf("+ rm time    = %f seconds\n", MPI_Wtime() - tstart);
 
       printf("--------------------------------------------\n");
       printf("IO rate (excluding rm time) = %f MiB/s\n",
