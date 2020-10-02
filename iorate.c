@@ -9,7 +9,8 @@ int main(void)
   const int nmeg = 128;
   
   int i;
-  int comm, rank, size, namelen;
+  int rank, size, namelen;
+  MPI_Comm comm;
   char nodename[MPI_MAX_PROCESSOR_NAME];
   char *filename = "iorate.dat";
   
