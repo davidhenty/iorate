@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Slurm job options (name, compute nodes, job time)
+#SBATCH --job-name=iorate
+#SBATCH --output=%x-%j.out
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=128
+#SBATCH --cpus-per-task=1
+#SBATCH --account=z19
+#SBATCH --nodelist=nid001904
+
+# Set the number of threads to 1
+#   This prevents any threaded system libraries from automatically
+#   using threading.
+
+export OMP_NUM_THREADS=1
+
+# Launch the parallel job
+
+srun --unbuffered --cpu-bind=cores ./iorate
