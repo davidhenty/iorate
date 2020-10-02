@@ -3,6 +3,7 @@ Trivial C MPI program to test serial IO rates
 
 Sample output on my laptop:
 
+````
 dsh@e7390dh:iorate$ mpicc -o iorate iorate.c
 dsh@e7390dh:iorate$ mpirun -n 4 ./iorate
 Running iorate test on 4 processes
@@ -15,3 +16,4 @@ Open time    = 0.000042 seconds
 --------------------------------------------
 IO rate (excluding rm time) = 124.766090 MiB/s
 --------------------------------------------
+````
